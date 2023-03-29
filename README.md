@@ -64,30 +64,43 @@ GitHub Location: https://github.com/LouFoster/Weather_Database.git
 2.	Save the Weather_Database_starter_code.ipynb starter code to the Weather_Database folder and rename it as Weather_Database.ipynb.
 
 3.	Use the np.random.uniform function to generate a new set of 2,000 random latitudes and 2,000 longitudes.
- 
+
+ ![image](https://user-images.githubusercontent.com/117233641/228460374-d6e4912c-d336-49ea-9572-b0ec64171410.png)
+
 
 4.	Use the citipy module to get the nearest city for each latitude and longitude combination.
- 
+
+![image](https://user-images.githubusercontent.com/117233641/228460531-3e9a3003-1bd2-45e5-8bd3-ddf1c159a201.png)
+
+
 
 5.	Import your OpenWeatherMap's API key and assemble the API call URL as a string variable. Recall to edit the config.py file to add your API key; also, it's critical to avoid publishing your API key on your GitHub repository.
  
+![image](https://user-images.githubusercontent.com/117233641/228460614-f0a20f8f-38b6-4fba-ae23-f55662d7020e.png)
+
 
 6.	Retrieve the following information from the API call:
-o	Latitude and longitude
-o	Maximum temperature
-o	Percent humidity
-o	Percent cloudiness
-o	Wind speed
-o	Weather description (for example, clouds, fog, light rain, clear sky)
+  o	Latitude and longitude
+  o	Maximum temperature
+  o	Percent humidity
+  o	Percent cloudiness
+  o	Wind speed
+  o	Weather description (for example, clouds, fog, light rain, clear sky)
  
+![image](https://user-images.githubusercontent.com/117233641/228460712-548135df-3436-4a40-babf-28626c594fa4.png)
 
+![image](https://user-images.githubusercontent.com/117233641/228460780-0d7c595f-7c0f-44c4-a466-a9438d22c4f1.png)
  
 
 7.	Add the weather data to a new DataFrame.
-o	Before continue to the next step, take a moment to confirm that the DataFrame looks similar to the image below (note that cities and countries may vary):
+  o	Before continue to the next step, take a moment to confirm that the DataFrame looks similar to the image below (note that cities and countries may vary):
+
+![image](https://user-images.githubusercontent.com/117233641/228460852-ecc0a0d1-637d-4dbb-a55b-92494f86262f.png)
  
 
 8.	Export the DataFrame as a CSV file, and save it as WeatherPy_Database.csv in the Weather_Database folder.
+ 
+![image](https://user-images.githubusercontent.com/117233641/228460923-de92b59b-90b3-46f0-9070-dec3594c90fa.png)
  
 
 
