@@ -24,7 +24,7 @@ By the end of this module, as assigned Data Analyst, I will complete the followi
 •	Create maps by using GeoViews and the Geoapify API.
 
 
-Purpose
+#Purpose
 
 (This module is built around a project that mirrors a real-world scenario that would require data analysis and visualization. In module6 , I will practice your analysis, visualization, and statistical skills by retrieving and analyzing weather data for a hypothetical travel company, PlanMyTrip.)
 
@@ -54,6 +54,7 @@ Analysis of the data will be split into three main parts, or stages.
 3.	Visualize Travel Data
 
 ##Results
+
 #Deliverable 1: Retrieve Weather Data
 For this deliverable, you'll generate a set of 2,000 random latitudes and longitudes, retrieve the nearest city, and perform an API call with OpenWeatherMap. In addition to the city weather data you gathered in this module, use your API skills to retrieve the current weather description for each city. Then, create a new DataFrame containing the updated weather data.
 
