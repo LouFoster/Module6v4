@@ -105,61 +105,81 @@ GitHub Location: https://github.com/LouFoster/Weather_Database.git
 
 
 
-#Deliverable 2: Create a Customer Travel Destinations Map
-In this deliverable, you'll employ input statements to retrieve customer weather preferences. Next, you'll use those preferences to identify potential travel destinations and nearby hotels. Finally, you'll show those destinations on a map.
+
+
+#Deliverable 2: 
+Create a Customer Travel Destinations Map
+
+In this deliverable,I will employ input statements to retrieve customer weather preferences. Next, I will use those preferences to identify potential travel destinations and nearby hotels. Finally, you'll show those destinations on a map.
+
 1.	Create a folder called Vacation_Search to save all the files related with this deliverable.
+
 2.	Download the Vacation_Search_starter_code.ipynb Jupyter notebook,save it into your Vacation_Search folder, and rename it as Vacation_Search.ipynb.
+
 3.	In the Vacation_Search.ipynb file, ensure that the dependencies and the Geoapify API key is imported correctly.
 
- 
+![image](https://user-images.githubusercontent.com/117233641/228462447-ed9aed24-c174-4357-a0fd-f8fcbc44e35a.png)
 
 4.	From the Weather_Database folder you created in the "Deliverable 1," import the WeatherPy_Database.csv file as a Pandas DataFrame named city_data_df.
  
+![image](https://user-images.githubusercontent.com/117233641/228462544-cd1e0063-bf99-43fb-adac-9b3f0f95e0f6.png)
 
 5.	Write two input statements that prompt the user to enter their minimum and maximum temperature criteria for their vacation.
  
+ ![image](https://user-images.githubusercontent.com/117233641/228462599-1d1915a1-4267-42c7-9167-bdcc75181794.png)
 
 6.	Create a new Pandas DataFrame by using the loc Pandas method to filter the city_data_df DataFrame for temperature criteria collected. Name the DataFrame as preferred_cities_df.
 
- 
+ ![image](https://user-images.githubusercontent.com/117233641/228462656-eae4d06e-2db4-4f4f-a4ec-3a53fcc5e035.png)
+
 
 7.	Create a new Pandas DataFrame named clean_travel_cities by using the Pandas dropna function on the preferred_cities_df to drop any empty rows.
  
+ ![image](https://user-images.githubusercontent.com/117233641/228462714-b7263e53-4259-499c-b048-504833dbd846.png)
+
 
 8.	Use the copy Pandas function to create a new DataFrame, called hotel_df, by copying the following columns from the clean_travel_cities DataFrame: "City", "Country", "Max Temp", "Current Description", "Lat", "Lng".
 
- 
+ ![image](https://user-images.githubusercontent.com/117233641/228462786-695c1337-e43b-42e2-bede-2a0f6414d98b.png)
+
 
 9.	Add a new empty column named Hotel Name to the hotel_df DataFrame.
- 
+
+![image](https://user-images.githubusercontent.com/117233641/228462850-5e0e3b3c-c943-49a9-8001-1376032f07c3.png)
 
 10.	Review the hotel search parameters provided. These parameters are the same we used in this module; you'll use them to search for a hotel for each city.
- 
+
+![image](https://user-images.githubusercontent.com/117233641/228462908-8fce14a6-4ebb-4d29-9be6-c30232166933.png)
 
 11.	Use a for loop to iterate through the hotel_df DataFrame. Retrieve the latitude and longitude of each city and use the Geoapify API to find the nearest hotel based on the search parameters provided, then add the hotel name to the hotel_df DataFrame. If a hotel isn't found, set the hotel name as "No hotel found".
 
+![image](https://user-images.githubusercontent.com/117233641/228462975-da9efed4-06a3-4cd8-b902-5442e4f1a245.png)
  
 
 12.	Drop any rows in the hotel_df DataFrame where a hotel name is not found and store the resulting data into a new DataFrame named clean_hotel_df.
-o	Take a moment to confirm that your clean_hotel_df DataFrame looks similar to the image below (note that the data may vary).
+   o	Take a moment to confirm that your clean_hotel_df DataFrame looks similar to the image below (note that the data may vary).
 
+![image](https://user-images.githubusercontent.com/117233641/228463028-485fb854-6a0a-4abc-8498-682388e23ac4.png)
+
+ 13.	Create an CSV file to store the clean_hotel_df DataFrame as WeatherPy_vacation.csv in the Vacation_Search folder.
  
+ ![image](https://user-images.githubusercontent.com/117233641/228463109-6cb10b44-7f0e-4ad3-961d-08c150ac0488.png)
 
-
-13.	Create an CSV file to store the clean_hotel_df DataFrame as WeatherPy_vacation.csv in the Vacation_Search folder.
- 
 
 14.	Use GeoViews to create a map that displays a point for every city in the clean_hotel_df DataFrame. In the point for each city add:
-o	The city name
-o	The country code
-o	The weather description
-o	The point's size should be the maximum temperature for the city
+  o	The city name
+  o	The country code
+  o	The weather description
+  o	The point's size should be the maximum temperature for the city
 
+![image](https://user-images.githubusercontent.com/117233641/228463232-701fc81a-8656-4d90-811b-264eaf12927f.png)
  
 15.	Take a screenshot of your map and save it to the Vacation_Search folder as WeatherPy_vacation_map.png.
-o	The map should look similar to the following image:
+  o	The map should look similar to the following image:
 
- 
+ ![image](https://user-images.githubusercontent.com/117233641/228463305-bd9d542c-0d0b-4fc3-a951-acedc4ac8567.png)
+
+
 
 
 ##Deliverable 3: Create a Travel Itinerary Map
@@ -173,49 +193,59 @@ For this deliverable, you'll use the Geoapify Routing API to create a travel iti
 
 3.	Make sure the initial dependencies and the Geoapify API key are imported.
 
- 
+ ![image](https://user-images.githubusercontent.com/117233641/228463393-9e1a8bf5-5cd9-4aa6-9147-561ea58f21e4.png)
+
 
 4.	From your Vacation_Search folder from Deliverable 2, import the WeatherPy_vacation.csv file as a DataFrame named vacation_df.
 
- 
+ ![image](https://user-images.githubusercontent.com/117233641/228463424-b2b3e507-d824-4498-a27a-a89a1a1c47f3.png)
 
 5.	Use GeoViews to create a map that shows all the cities in the vacation_df DataFrame. Configure the map as follows:
-o	The point's size should be the maximum temperature for the city
-o	The point's color should be the city's name
-o	Use the hover_cols parameter to the the "Hotel Name", "Country", and "Current Description" columns to each point as additional information.
+   o	The point's size should be the maximum temperature for the city
+   o	The point's color should be the city's name
+   o	Use the hover_cols parameter to the the "Hotel Name", "Country", and "Current Description" columns to each point as additional information.
 
- 
+ ![image](https://user-images.githubusercontent.com/117233641/228463594-565223c7-df27-4b4a-bf99-ba903093600b.png)
+
 
 6.	From the map, choose four cities that a customer might want to visit. They should be close together and in the same country. Use the loc method to create separate DataFrames for each city on the travel route.
 
- 
+ ![image](https://user-images.githubusercontent.com/117233641/228463641-bc751295-93fb-4936-a133-44bd530f145a.png)
+
 
 HINT
 7.	Use the Pandas concat function to merge the DataFrame from each city in the itinerary to create a new DataFrame named itinerary_df to store the itinerary details. Your final DataFrame should look as in the image below.
- 
 
+![image](https://user-images.githubusercontent.com/117233641/228463708-a8bc81f3-a446-40dc-adaf-0398f353ee37.png)
  
+![image](https://user-images.githubusercontent.com/117233641/228463776-2c64cbc3-7c1d-4536-b50a-a6e5ef73912e.png)
 
 8.	Use the Pandas copy function to create a new DataFrame named waypoints_df to store the longitude and latitude for each city in itinerary_df.
 
+![image](https://user-images.githubusercontent.com/117233641/228463855-ad3b7cde-e630-4a34-9df5-ed834d225692.png)
  
 
 9.	Use GeoViews to create a map that shows the four cities in the itinerary. You may end with a map similar to the image below.
 
- 
+![image](https://user-images.githubusercontent.com/117233641/228463918-bdcba7b0-fa95-41b5-a5bb-0b93e3efd1bc.png)
 
 10.	Next, you'll use the Geoapify Routing API to find a route between the cities in the itinerary. Review the code that sets the initial parameters and fetches the coordinates from each city to define the waypoints parameter by using a for loop.
 
- 
+![image](https://user-images.githubusercontent.com/117233641/228463981-95eea187-0e46-4dd7-b265-25ed547fd376.png)
 
 11.	Use the Geoapify Routing API to retrieve the route's directions for your itinerary.
 
- 
+![image](https://user-images.githubusercontent.com/117233641/228464091-ca72273c-21e0-4524-b63b-155f04e1227f.png)
 
 12.	From the JSON response, store the route's legs coordinates in a variable called legs.
  
+![image](https://user-images.githubusercontent.com/117233641/228464205-bd460488-37a1-4382-a493-9ded1493fd48.png)
+ 
+ 
 13.	Loop through the route legs coordinates to fetch the latitude and longitude for each step. Store the latitude and longitude values into two Python lists named longitude and latitude.
 14.	Use the longitude and latitude Python lists to create a new DataFrame named route_df.
+
+![image](https://user-images.githubusercontent.com/117233641/228464269-879d0f67-f8e0-44fa-aa5c-79ef38c8677a.png)
 
  
 15.	Use the GeoViews Path function to configure a line plot by using route_df. Set a custom color and width for the line that may contrast with the map.
